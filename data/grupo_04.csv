@@ -1,0 +1,82 @@
+tramo_id,zona,velocidad_promedio_kmh,flujo_vehiculos_hora,accidente_reportado
+T001,Vía Panamericana,79,1039,1
+T002,Sur,68,884,1
+T003,Sur,35,1478,1
+T004,Vía Panamericana,29,1380,0
+T005,Sur,46,778,0
+T006,Norte,73,548,1
+T007,Vía Panamericana,71,727,1
+T008,NORTE,49,212,0
+T009,SUR,65,802,1
+T010,Norte,78,284,0
+T011,Vía Panamericana,,1291,0
+T012,vía panamericana,58,668,0
+T013,Centro,73,447,0
+T014,Sur,78,719,1
+T015,Centro,35,475,0
+T016,Vía Panamericana,54,258,0
+T017,Norte,46,821,0
+T018,Oriente,39,729,0
+T019,Vía Panamericana,76,454,1
+T020,Sur,59,593,0
+T021,Sur,59,546,0
+T022,Oriente,39,1328,0
+T023,Vía Panamericana,69,591,0
+T024,Centro,24,593,0
+T025,Centro,88,457,1
+T026,Oriente,55,1210,1
+T027,Vía Panamericana,33,996,0
+T028,Oriente,52,1152,1
+T029,Norte,70,530,1
+T030, Sur,78,342,1
+T031,Oriente,81,413,0
+T032,Sur,74,30456,1
+T033,oriente,46,212,0
+T034,Norte ,41,1482,0
+T035,Oriente,69,792,1
+T036,Vía Panamericana,52,1017,1
+T037,Sur,58,1388,1
+T038,Centro,80,1244,1
+T039,Centro,28,777,0
+T040,Centro,23,232,0
+T041,Oriente,38,904,0
+T042,Oriente,48,707,0
+T043,Vía Panamericana,41,1075,0
+T044,Oriente,83,332,0
+T045,Vía Panamericana,52,674,0
+T046,Vía Panamericana,45,353,0
+T047,Sur,46,1423,1
+T048,Oriente,63,727,1
+T049,Sur,53,142,0
+T050,Vía Panamericana,28,177,0
+T051,Vía Panamericana,55,1031,0
+T052,Oriente,72,502,1
+T053,Centro,73,1352,1
+T054,Centro,89,792,1
+T055,Sur,48,896,0
+T056,Sur,79,927,1
+T057,Centro,65,1222,1
+T058,Oriente,25,823,0
+T059,Centro,68,155,0
+T060,Norte,89,1264,1
+T061,Oriente,40,1252,0
+T062,Norte,48,243,0
+T063,Sur,41,976,0
+T064,Sur,71,359,0
+T065,Norte,83,770,1
+T066,Oriente,38,599,0
+T067,Oriente,48,1276,1
+T068,Vía Panamericana,75,618,1
+T069,Norte,82,1467,1
+T070,Sur,88,1459,1
+T071,Sur,,1029,1
+T072,Centro,70,1045,1
+T073,Centro,40,306,0
+T074,Vía Panamericana,39,325,0
+T075,Sur,45,486,0
+T076,Norte,72,744,1
+T077,Vía Panamericana,58,663,0
+T078,Vía Panamericana,51,387,0
+T079,Oriente,49,1310,0
+T080,Centro,,270,0
+TOTAL,,4428.0,91407,
