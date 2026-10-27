@@ -221,6 +221,34 @@ def perceptron(df):
     return w, b, media, desviacion
 
 
+
+def interpretar(df, w, b, media, desviacion):
+    """Tarea 6: errores de clasificación y predicción de dos registros nuevos."""
+    X = df[[COL_X1, COL_X2]].to_numpy(dtype=float)
+    y = df[COL_Y].to_numpy(dtype=int)
+    p = predecir_probabilidad((X - media) / desviacion, w, b)
+    pred = (p >= 0.5).astype(int)
+    mal = pred != y
+    print(f"\n=== Registros del lado equivocado: {mal.sum()} de {len(y)} ===")
+    print(f"Falsos positivos (predijo 1, real 0): {((pred == 1) & (y == 0)).sum()}")
+    print(f"Falsos negativos (predijo 0, real 1): {((pred == 0) & (y == 1)).sum()}")
+    errores = df[mal].copy()
+    errores["probabilidad"] = p[mal].round(2)
+    print(errores.to_string())
+
+    print("\n=== Dos registros nuevos (escalados con media y desviación del entrenamiento) ===")
+    nuevos = {
+        "Esperado 1 (rápido y con mucho flujo)": [85, 1200],
+        "Esperado 0 (lento y con poco flujo)": [35, 300],
+    }
+    for nombre, valores in nuevos.items():
+        z = (np.array(valores, dtype=float) - media) / desviacion
+        prob = predecir_probabilidad(z, w, b)
+        print(f"{nombre}: velocidad={valores[0]} km/h, flujo={valores[1]} veh/h "
+              f"-> z={z.round(2)}, probabilidad de accidente={prob:.4f}")
+
+
+
 def main():
     df = cargar_datos()
     inspeccionar(df)
@@ -228,8 +256,8 @@ def main():
     limpio.to_csv(RUTA_LIMPIO, index=False)
     print(f"\nGuardado: {RUTA_LIMPIO}")
     graficar(limpio)
-    perceptron(limpio)
-
+    w, b, media, desviacion = perceptron(limpio)
+    interpretar(limpio, w, b, media, desviacion)
 
 if __name__ == "__main__":
     main()
