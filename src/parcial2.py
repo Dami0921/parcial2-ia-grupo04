@@ -1,11 +1,18 @@
 """Segundo parcial IA - Grupo 04: movilidad en tramos viales de Cartago."""
 from pathlib import Path
 
+import matplotlib
+
+matplotlib.use("Agg")  # guarda gráficos sin pantalla (contenedor)
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 
 BASE = Path(__file__).resolve().parent.parent
 RUTA_CSV = BASE / "data" / "grupo_04.csv"
 RUTA_LIMPIO = BASE / "data" / "grupo_04_limpio.csv"
+RUTA_GRAFICO1 = BASE / "data" / "grafico1_dispersion.png"
+RUTA_GRAFICO2 = BASE / "data" / "grafico2_boxplot_velocidad.png"
 COL_X1 = "velocidad_promedio_kmh"
 COL_X2 = "flujo_vehiculos_hora"
 COL_Y = "accidente_reportado"
@@ -84,12 +91,40 @@ def limpiar_datos(df):
     return df
 
 
+def graficar(df):
+    """Tarea 4: dos gráficos con Seaborn guardados en data/."""
+    sns.set_theme(style="whitegrid")
+
+    # Gráfico 1: dispersión de las dos entradas coloreada por el objetivo
+    plt.figure(figsize=(8, 5))
+    sns.scatterplot(data=df, x=COL_X1, y=COL_X2, hue=COL_Y, palette="Set1", s=70)
+    plt.title("Velocidad vs flujo de vehículos según accidente reportado")
+    plt.xlabel("Velocidad promedio (km/h)")
+    plt.ylabel("Flujo de vehículos (veh/h)")
+    plt.legend(title="Accidente (1 = sí)", loc="upper left", bbox_to_anchor=(1.02, 1))
+    plt.tight_layout()
+    plt.savefig(RUTA_GRAFICO1, dpi=150)
+    plt.close()
+
+    # Gráfico 2: velocidad promedio en tramos con y sin accidente
+    plt.figure(figsize=(6, 5))
+    sns.boxplot(data=df, x=COL_Y, y=COL_X1, hue=COL_Y, palette="Set1", legend=False)
+    plt.title("Velocidad promedio por clase de accidente")
+    plt.xlabel("Accidente reportado (0 = no, 1 = sí)")
+    plt.ylabel("Velocidad promedio (km/h)")
+    plt.tight_layout()
+    plt.savefig(RUTA_GRAFICO2, dpi=150)
+    plt.close()
+    print(f"Gráficos guardados: {RUTA_GRAFICO1.name}, {RUTA_GRAFICO2.name}")
+
+
 def main():
     df = cargar_datos()
     inspeccionar(df)
     limpio = limpiar_datos(df)
     limpio.to_csv(RUTA_LIMPIO, index=False)
     print(f"\nGuardado: {RUTA_LIMPIO}")
+    graficar(limpio)
 
 
 if __name__ == "__main__":
