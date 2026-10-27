@@ -1,0 +1,81 @@
+tramo_id,zona,velocidad_promedio_kmh,flujo_vehiculos_hora,accidente_reportado
+T001,Vía Panamericana,79.0,1039,1
+T002,Sur,68.0,884,1
+T003,Sur,35.0,1478,1
+T004,Vía Panamericana,29.0,1380,0
+T005,Sur,46.0,778,0
+T006,Norte,73.0,548,1
+T007,Vía Panamericana,71.0,727,1
+T008,Norte,49.0,212,0
+T009,Sur,65.0,802,1
+T010,Norte,78.0,284,0
+T011,Vía Panamericana,55.0,1291,0
+T012,Vía Panamericana,58.0,668,0
+T013,Centro,73.0,447,0
+T014,Sur,78.0,719,1
+T015,Centro,35.0,475,0
+T016,Vía Panamericana,54.0,258,0
+T017,Norte,46.0,821,0
+T018,Oriente,39.0,729,0
+T019,Vía Panamericana,76.0,454,1
+T020,Sur,59.0,593,0
+T021,Sur,59.0,546,0
+T022,Oriente,39.0,1328,0
+T023,Vía Panamericana,69.0,591,0
+T024,Centro,24.0,593,0
+T025,Centro,88.0,457,1
+T026,Oriente,55.0,1210,1
+T027,Vía Panamericana,33.0,996,0
+T028,Oriente,52.0,1152,1
+T029,Norte,70.0,530,1
+T030,Sur,78.0,342,1
+T031,Oriente,81.0,413,0
+T032,Sur,74.0,729,1
+T033,Oriente,46.0,212,0
+T034,Norte,41.0,1482,0
+T035,Oriente,69.0,792,1
+T036,Vía Panamericana,52.0,1017,1
+T037,Sur,58.0,1388,1
+T038,Centro,80.0,1244,1
+T039,Centro,28.0,777,0
+T040,Centro,23.0,232,0
+T041,Oriente,38.0,904,0
+T042,Oriente,48.0,707,0
+T043,Vía Panamericana,41.0,1075,0
+T044,Oriente,83.0,332,0
+T045,Vía Panamericana,52.0,674,0
+T046,Vía Panamericana,45.0,353,0
+T047,Sur,46.0,1423,1
+T048,Oriente,63.0,727,1
+T049,Sur,53.0,142,0
+T050,Vía Panamericana,28.0,177,0
+T051,Vía Panamericana,55.0,1031,0
+T052,Oriente,72.0,502,1
+T053,Centro,73.0,1352,1
+T054,Centro,89.0,792,1
+T055,Sur,48.0,896,0
+T056,Sur,79.0,927,1
+T057,Centro,65.0,1222,1
+T058,Oriente,25.0,823,0
+T059,Centro,68.0,155,0
+T060,Norte,89.0,1264,1
+T061,Oriente,40.0,1252,0
+T062,Norte,48.0,243,0
+T063,Sur,41.0,976,0
+T064,Sur,71.0,359,0
+T065,Norte,83.0,770,1
+T066,Oriente,38.0,599,0
+T067,Oriente,48.0,1276,1
+T068,Vía Panamericana,75.0,618,1
+T069,Norte,82.0,1467,1
+T070,Sur,88.0,1459,1
+T071,Sur,55.0,1029,1
+T072,Centro,70.0,1045,1
+T073,Centro,40.0,306,0
+T074,Vía Panamericana,39.0,325,0
+T075,Sur,45.0,486,0
+T076,Norte,72.0,744,1
+T077,Vía Panamericana,58.0,663,0
+T078,Vía Panamericana,51.0,387,0
+T079,Oriente,49.0,1310,0
+T080,Centro,55.0,270,0
